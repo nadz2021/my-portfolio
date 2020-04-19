@@ -1,0 +1,19 @@
+.service {
+    &-list {
+        &__title {            
+            font-size: 15px;
+            
+            @include ipad-2 {
+                font-size: 20px;
+            }
+            @include desktop-up {
+                font-size: 27px;
+            }
+        }
+        p {
+            @include ipad {
+                font-size: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.navbar {
+    .nav-item {
+        .nav-link {            
+            color: $main-color;
+        }    
+    }
+    &-collapse.show, .navbar-collapse.collapsing {        
+        padding-top: 0.5em;
+        text-align: right;
+    }
+}
+
