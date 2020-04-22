@@ -1,6 +1,13 @@
 .cd-words-wrapper {
     display: inline;
 }
+.border-color-secondary {
+    border-color: $secondary-color!important;
+}
+
+.background-color-secondary {
+    background-color: $secondary-color!important;
+}
 
 .color-secondary {
     color: $secondary-color;

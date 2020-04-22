@@ -6,6 +6,10 @@ $("#resume").animatedModal({
     color:'#000'
 });
 
+$("#news").animatedModal({
+    color:'#000'
+});
+
 $("#portfolio").animatedModal({
     color:'#000'
 });

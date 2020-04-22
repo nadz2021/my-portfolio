@@ -1,0 +1,15 @@
+.resume{
+    &_accordion {
+        &__title {
+            font-size: 1.5em;
+            &:hover {
+                color: $color-white;
+            }
+        }
+        &-list {
+            &__item {
+                list-style-type: disc;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.card {
+    background-color: transparent;
+    &__img {
+        height: 240px;
+        background-color: transparent;
+    }
+    p {
+        font-size: 1em;
+    }
+    &:hover {
+        box-shadow: 0 6px 16px rgba(255,255,255,.2)!important;
+    }
+}
