@@ -1,0 +1,19 @@
+.portfolio {
+    &__img {
+        background: transparent;
+    }
+    &__span-content {
+        display: block;
+        @include ipad-2 {
+            display: inline;
+        }
+    }
+    &__card {        
+        @include ipad {
+            min-height: 250px;
+        }
+        @include ipad-2 {
+            min-height: 270px;
+        }
+    }
+}

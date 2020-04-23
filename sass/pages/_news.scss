@@ -1,0 +1,46 @@
+.news {
+    &__link {
+        display: contents;
+        color: $color-white;
+        &:hover {
+            box-shadow: 0 6px 16px rgba(255,255,255,.2)!important;
+            color: $color-white;
+            text-decoration: none;
+            img {
+                border-color: $secondary-color!important;
+            }
+        }
+    }
+    &__img {
+        border-bottom: 10px solid $color-gray;
+    }
+    &_card {
+        border: 1px solid $color-white;
+        min-height: 250px;
+        position: relative;
+        @include ipad {
+            min-height: 300px;
+        }
+        &:hover {
+            border-color: $secondary-color;
+            span {
+                background: $secondary-color;    
+                color: $color-white;
+            }
+        }        
+    }    
+    &__header-title {
+        font-size: 2em;
+    }
+    &__date {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: $color-white;
+        color: $color-gray;        
+    }
+    
+}
+
+
+

@@ -1,0 +1,13 @@
+.contact {
+    &-social-media {
+        &__item {
+            a {
+                color: $secondary-color;
+                &:hover {
+                    color: $color-white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
