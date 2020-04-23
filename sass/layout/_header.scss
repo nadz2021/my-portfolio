@@ -1,0 +1,8 @@
+header {
+    visibility: hidden;
+}
+.loaded {
+    header {
+        visibility: visible;
+    }
+}
