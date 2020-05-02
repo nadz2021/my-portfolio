@@ -1,2 +1,3 @@
+Sitemap: https://eonadela.com/sitemap.xml
 User-agent: *
 Disallow: /
