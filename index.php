@@ -5,6 +5,9 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
   header('Location: ' . $location);
   exit;
 }
+
+require('constant.php');
+
 ?> -->
 <!doctype html>
 <html lang="en">
@@ -516,9 +519,9 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
                 </div>
               </div>
             </div>
-            <p>You can also contact me through social media links</p>
-            <div class="row pt-5 contact-social-media-list">
+            <div class="row py-5 contact-social-media-list">
               <div class="col-12">
+                <p>You can also contact me through social media links</p>
                 <div class="row py-5 text-center border rounded">
                   <div class="col-12 col-sm-6 col-md-4 col-lg-3 contact-social-media__item py-5">
                     <a title="facebook" href="https://www.facebook.com/elymar.nadela">
@@ -538,18 +541,52 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
                   <div class="col-12 col-sm-6 col-md-4 col-lg-3 contact-social-media__item py-5">
                     <a title="google" href="#">
                       <i class="fa fa-google fa-4x" aria-hidden="true"></i>
-                      <p class="pt-4">pjaynadela@gmail.com</p>
+                      <p class="pt-4 word-break">pjaynadela@gmail.com</p>
                     </a>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 contact-social-media__item py-5">
-                  <a title="skype" href="#">
-                    <i class="fa fa-skype fa-4x" aria-hidden="true"></i>
-                    <p class="pt-4">nadz2021</p>
-                  </a>
-              </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 contact-social-media__item py-5">
+                    <a title="skype" href="#">
+                      <i class="fa fa-skype fa-4x" aria-hidden="true"></i>
+                      <p class="pt-4">nadz2021</p>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="row py-5 contact-us">
+              <div class="col-12">
+                <p class="pb-5">You can also direct contact by filling up this contact us form.</p>
+                <form role="form" action="contact.php" method="post" class="contact-form" name="contact-form" data-toggle="validator">
+                  <!-- Name -->
+                  <div class="form-group label-floating pb-5">
+                    <label class="control-label" for="name">Name</label>
+                    <input class="form-control pt-4" id="name" type="text" name="name" required data-error="Please enter your name">
+                    <div class="help-block with-errors"></div>
+                  </div>
+
+                  <!-- email -->
+                  <div class="form-group label-floating pb-5">
+                    <label class="control-label" for="email">Email</label>
+                    <input class="form-control pt-4" id="email" type="email" name="email" required data-error="Please enter your Email">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  
+                  <!-- Message -->
+                  <div class="form-group label-floating pb-5">
+                      <label for="message" class="control-label">Message</label>
+                      <textarea class="form-control pt-4" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                      <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="g-recaptcha" data-sitekey="<?php echo SITE_KEY; ?>"></div>
+                  <!-- Form Submit -->
+                  <div class="form-submit mt-5">
+                      <button class="btn btn-lg btn-primary contact-form__btn" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Send Message</button>
+                      <div id="msgSubmit" class="h3 text-center hidden"></div>
+                      <div class="clearfix"></div>
+                  </div>
+                </form>
+              </div> 
+            </div>           
           </div>
         </section>
       </div>
@@ -558,6 +595,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
     <script src="js/animatedModal.js" type="text/javascript"></script>
     <script src="js/bootstrap.js" type="text/javascript"></script>
     <script src="js/headline-master.js" type="text/javascript"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>	
     <script type="text/javascript">
       $(document).ready(function() {
       setTimeout(function() {

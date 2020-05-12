@@ -1,14 +1,9 @@
-/* _-_-_- base/BASE -_-_-_ */
  body {
      background-color: $color-black;
  }
-
- /* width */
 ::-webkit-scrollbar {
     width: 5px;
   }
-  
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: $secondary-color; 
     border-radius: 10px;
