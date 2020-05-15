@@ -5,4 +5,15 @@ header {
     header {
         visibility: visible;
     }
+        
+}
+
+.header {
+    &__logo {
+        height: 50px;
+        width: 90px;
+    }
+    &__title {
+        text-indent: -9999px;
+    }
 }

@@ -6,7 +6,6 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
   exit;
 }
 
-require('constant.php');
 
 ?> -->
 <!doctype html>
@@ -33,7 +32,7 @@ require('constant.php');
     </div>
     <header>
       <nav class="pt-4 px-5 navbar fixed-top navbar-expand-lg navbar-dark">
-        <a title="EON" class="navbar-brand" href="#">EON</a>
+        <a title="EON" class="navbar-brand" href="#"><img class="header__logo" src="images/logo_black.png" alt="EON logo" title="EON logo" /><span class="d-block header__title">EON</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -577,7 +576,7 @@ require('constant.php');
                       <textarea class="form-control pt-4" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
                       <div class="help-block with-errors"></div>
                   </div>
-                  <div class="g-recaptcha" data-sitekey="<?php echo SITE_KEY; ?>"></div>
+                  <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
                   <!-- Form Submit -->
                   <div class="form-submit mt-5">
                       <button class="btn btn-lg btn-primary contact-form__btn" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Send Message</button>
@@ -595,8 +594,15 @@ require('constant.php');
     <script src="js/animatedModal.js" type="text/javascript"></script>
     <script src="js/bootstrap.js" type="text/javascript"></script>
     <script src="js/headline-master.js" type="text/javascript"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>	
-    <script type="text/javascript">
+    <script src="https://www.google.com/recaptcha/api.js?render=6Le-QPYUAAAAAOVHzyHFL7YjiYze8Ey2UJolA3Yy"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6Le-QPYUAAAAAOVHzyHFL7YjiYze8Ey2UJolA3Yy', { action: 'contact' }).then(function (token) {
+                var recaptchaResponse = document.getElementById('recaptchaResponse');
+                recaptchaResponse.value = token;
+            });
+        });
+        
       $(document).ready(function() {
       setTimeout(function() {
           $('.wrapper').addClass('loaded');
