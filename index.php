@@ -405,7 +405,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
               </div>
               <div class="col-12 col-sm-4 pb-5">                  
                 <div class="news_card border-top-0">
-                  <a title="Cdn" href="https://www.utterlyrandomtechie.com/elocker-ph-launch/" target="_blank" class="news__link">
+                  <a title="Cdn" href="https://cebudailynews.inquirer.net/96504/digital-laundry-start-up-outlines-expansion-plans" target="_blank" class="news__link">
                     <img alt="Cdn" title="Cdn" src="images/cdn.png" class="news__img img-fluid mb-3">
                     <h5 class="news__header-title pb-5 px-3">eLocker PH Media Launch!</h5>
                     <span class="pull-right p-2 news__date"><small><em> July 19, 2016</em></small></span>
